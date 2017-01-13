@@ -5,4 +5,4 @@ app.get(['/', '/index.html'], function (req, res) {
   res.send('Hello ELB '); 
 });
 
-app.listen(80);
+app.listen(3000);
