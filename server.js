@@ -101,6 +101,8 @@ sio.on('connection', function cb(socket) {
         //         });
         //     });
         // }
+        var generatedMsg = chatMessage.generateMessage(undefined, message.text, undefined, undefined); 
+        sio.emit('newMessage', generatedMsg);
     });
 
     socket.on('disconnect', function cb() {

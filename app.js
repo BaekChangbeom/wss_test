@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.get(['/', '/index.html'], function (req, res) {
-  res.send('Hello ELB applied healthcheck'); 
+  res.send('Test page for testing SOCKET.IO by Baek'); 
 });
 
 
