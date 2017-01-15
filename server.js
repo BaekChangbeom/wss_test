@@ -40,6 +40,11 @@ var chatMessage = new ChatMessage();
 // CustomError = errHandler.CustomError;
 
 sio.on('connection', function cb(socket) {
+    socket.on('connect', function cb() {
+        console.log('Socket.io server -  socketId\(' + socket.id +  '\) connected!');
+        // rooms.disconnectUser(socket.id);
+    });
+
     // 利用しない
     socket.on('joinByName', function cb(params) {
         if (!validation.isRealString(params.id) || !validation.isRealString(params.room)) {
