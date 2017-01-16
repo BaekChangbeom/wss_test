@@ -5,6 +5,10 @@ app.get(['/', '/index.html'], function (req, res) {
   res.send('Test page for testing SOCKET.IO by Baek'); 
 });
 
+app.get(['/api/v1'], function (req, res) {
+  res.send('Test page for /api/v1'); 
+});
+
 
 app.get(['/healthcheck.html']), function (req, res) {
   response.writeHead(200, {
